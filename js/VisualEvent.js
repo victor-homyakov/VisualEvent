@@ -571,7 +571,7 @@ VisualEvent.prototype = {
 		var label;
 		
 		// Element is hidden
-		if ( $(eventNode.node).filter(':visible').length === 0 ) {
+		if ( !$(eventNode.node).is(':visible') ) {
 			this.s.nonDomEvents += 1;
 			return;
 		}
